@@ -1,0 +1,32 @@
+{
+    "seed": {int: random seed for the simulation
+    },
+    "T": {int: number of rounds constituting each run
+    },
+    "n_epochs": {int: number of runs of the simulation
+    },
+    "noise_std": {float, >0: standard deviation of the noise
+    },
+    "m": {int: AR-UCB parameter defining the upper bound on gamma_0
+    },
+    "lambda": {float, >0: ridge regression penalization factor
+    },
+    "delta": {float, >0: convergence probability for AR-UCB
+    },
+    "gamma": {list of lists of floats: autoregressive parameters for each action, 
+    for example, if we want to define a setting with 2 actions and k=2 we have: [
+            [
+                1,
+                0.5,
+                0.0
+            ],
+            [
+                1,
+                0.0,
+                0.48
+            ]
+        ], where each list corresponds to an action and the first number in each list corresponds to the gamma_0 associated
+    },
+    "X0": {list of floats: starting memory of the systems, must have a length >= k
+    }
+}
